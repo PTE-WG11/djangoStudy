@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+以下内容来自视图函数<a href="{% url 'test_html' %}">test_html01</a>
+<p>我是模板层的</p>
+<hr>
+以下内容来自视图函数<a href="{% url 'name'%}">test_html02</a>
+<p>username:{{ username }}</p><br>
+{{ func }}
+<p>age:{{ age }}</p>
+<hr>
+以下内容来自视图函数<a href="{% url 'test_html_param'%}">test_html_param</a>
+<h4>int 是{{ int }}</h4>
+<h4>str 是 {{ str }}</h4>
+<h4>lst 是 {{ lst }}</h4>
+<h4>lst0是 {{ lst.0 }}</h4>
+<h4>dict[a] 是 {{ dict.a }}</h4>
+<h4>function 是 {{ func }}</h4>
+<h4>class_obj 是 {{ class_obj.say }}</h4>
+<h4>script 是：{{ script }}</h4>
+<h4>script 没有转义是：{{ script|safe }}（加了过滤器|safe）</h4>
+
+<hr>
+
+以下内容来自视图函数<a href="/test_html_param">test_html_param</a>
+<h4></h4>
+
+</body>
+</html>
